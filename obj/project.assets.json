@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sebastianbinz/Desktop/C#/HelloWorld/HelloWorld.csproj",
+      "projectUniqueName": "/Users/sebastianbinz/Desktop/Projekte/HelloWorld/HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "/Users/sebastianbinz/Desktop/C#/HelloWorld/HelloWorld.csproj",
+      "projectPath": "/Users/sebastianbinz/Desktop/Projekte/HelloWorld/HelloWorld.csproj",
       "packagesPath": "/Users/sebastianbinz/.nuget/packages/",
-      "outputPath": "/Users/sebastianbinz/Desktop/C#/HelloWorld/obj/",
+      "outputPath": "/Users/sebastianbinz/Desktop/Projekte/HelloWorld/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/sebastianbinz/.nuget/NuGet/NuGet.Config"
