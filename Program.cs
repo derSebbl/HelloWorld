@@ -152,3 +152,62 @@ switch (math)
 }
 */
 
+
+//Achte Übungsaufgabe
+/*
+string [] producst = new string [4];
+producst[0] = "Wasserfalsche";
+producst[1] = "Kaugummi";
+producst[2] = "Nudeln";
+producst[3] = "Kartoffeln";
+
+
+string [] producst = new string [] 
+{
+    "Wasserfalsche", 
+    "Kaugummi", 
+    "Nudeln", 
+    "Kartoffeln",
+    "Bananen"
+};
+
+Console.WriteLine(producst[0]);
+Console.ReadKey();
+*/
+
+
+//Neunte Übungsaufgabe
+/*
+string [,] names = new string [4, 2];
+
+//1 Zeile
+names[0, 0] = "Max";
+names[0, 1] = "Mustermann";
+
+//2 Zeile
+names[1, 0] = "Erika";
+names[1, 1] = "Musterfrau";
+
+//3 Zeile
+names[2, 0] = "Hans";
+names[2, 1] = "Müller";
+
+//4 Zeile
+names[3, 0] = "Peter";
+names[3, 1] = "Schmidt";
+
+
+string [,] names = new string [,]
+{
+    {"Max", "Mustermann"},
+    {"Erika", "Musterfrau"},
+    {"Hans", "Müller"},
+    {"Peter", "Schmidt"}
+};
+
+Console.WriteLine(names[0, 0] + " " + names[0, 1]);
+Console.WriteLine(names[1, 0] + " " + names[1, 1]);
+Console.WriteLine(names[2, 0] + " " + names[2, 1]);
+Console.WriteLine(names[3, 0] + " " + names[3, 1]);
+Console.ReadKey();
+*/
