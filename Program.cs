@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.ComponentModel;
+using System.Text;
+using System.Text.RegularExpressions;
 
 // Erste Übungsaufgabe
 /*
@@ -209,5 +211,164 @@ Console.WriteLine(names[0, 0] + " " + names[0, 1]);
 Console.WriteLine(names[1, 0] + " " + names[1, 1]);
 Console.WriteLine(names[2, 0] + " " + names[2, 1]);
 Console.WriteLine(names[3, 0] + " " + names[3, 1]);
+Console.ReadKey();
+*/
+
+
+//Zehnte Übungsaufgabe
+/*
+Console.WriteLine("Gib eine Zahl ein:");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Gib eine zweite Zahl ein:");
+int number2 = Convert.ToInt32(Console.ReadLine());
+
+while (number <= number2)
+{
+    if (number % 2 == 0)
+    {
+        Console.WriteLine(number);
+    }
+    number++;
+}
+
+Console.ReadKey();
+*/
+
+
+//Elfte Übungsaufgabe
+/*
+bool isNumber = true;
+
+while (isNumber == true)
+{
+
+Console.WriteLine("Gib eine Zahl ein:");
+int number = Convert.ToInt32(Console.ReadLine());   
+Console.WriteLine("Gib eine zweite Zahl ein:");
+int number2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Gib den Rechenoperator ein:");
+string math = Console.ReadLine();
+
+    switch (math)
+    {
+        case "+":
+            Console.WriteLine("{0} + {1} = {2}", number, number2, number + number2);
+            isNumber = false;
+            break;
+        case "-":
+            Console.WriteLine("{0} - {1} = {2}", number, number2, number - number2);
+            isNumber = false;
+            break;
+        case "*":
+            Console.WriteLine("{0} * {1} = {2}", number, number2, number * number2);
+            isNumber = false;
+            break;
+        case "/":
+            Console.WriteLine("{0} / {1} = {2}", number, number2, number / number2);
+            isNumber = false;
+            break;
+        case "%":
+            Console.WriteLine("{0} % {1} = {2}", number, number2, number % number2);
+            isNumber = false;
+            break;
+        default:
+            Console.WriteLine("Ungültige Eingabe");
+            isNumber = false;
+            break;
+    }
+    Console.ReadKey();
+    Console.Clear();
+    isNumber = true;
+}
+*/
+
+
+//Zwölfte Übungsaufgabe
+/*
+Console.WriteLine("Gib eine Zahl ein:");
+int number = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine("{0} x {1} = {2}", number, i, number * i);
+}
+Console.ReadKey();
+*/
+
+//Dreizehnte Übungsaufgabe
+/*
+Console.WriteLine("Gib die breite an:");
+int width = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Gib die höhe an:");
+int height = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 1; i <= height; i++)
+{
+    for (int j = 1; j <= width; j++)
+    {
+        Console.Write("#");
+    }
+    Console.WriteLine();
+}
+Console.ReadKey();
+*/
+
+
+//Vierzehnte Übungsaufgabe
+/*
+for ( int i = 1; i <= 10; i++)
+{
+    for (int j = 1; j <= 10; j++)
+    {
+        Console.Write("{0} x {1} = {2}\t", i, j, i * j);
+    }
+        for (int k = 1; k <= 10; k++)
+        {
+            Console.CursorLeft = 20;
+        }
+    Console.WriteLine();
+}
+Console.ReadKey();
+*/
+
+
+//Fünfzehnte Übungsaufgabe
+/*
+Console.WriteLine("Gib einen Satz ein:");
+string sentence = Console.ReadLine();
+string[] words = sentence.Split(char.Parse(" "));
+
+for (int i = 0; i < words.Length; i++)
+{
+    for (int j = 0; j < words[i].Length; j++)
+    {
+        Console.WriteLine(words[i][j]);
+    }
+    Console.WriteLine();
+}
+Console.ReadKey();
+*/
+
+
+
+//Sechzehnte Übungsaufgabe
+/*
+Console.WriteLine("Gib ein Wort ein:");
+string word = Console.ReadLine().ToLower();
+string reverse = "".ToLower();
+
+for (int i = word.Length - 1; i >= 0; i--)
+{
+    reverse += word[i];
+}
+
+if (word == reverse)
+{
+    Console.WriteLine("Das Wort ist ein Palindrom");
+}
+else
+{
+    Console.WriteLine("Das Wort ist kein Palindrom");
+}
 Console.ReadKey();
 */
