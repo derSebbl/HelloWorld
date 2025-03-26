@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.ComponentModel;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -372,3 +373,151 @@ else
 }
 Console.ReadKey();
 */
+
+/*
+MainMenu();
+
+
+static void MainMenu() {
+
+Console.WriteLine("Willkommen zum Hangman Spiel!");
+Console.WriteLine();
+Console.WriteLine("Wähle eine Option:");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("1. Spiel starten");
+Console.WriteLine("2. Spiel beenden");
+Console.ResetColor();
+Console.WriteLine();
+Console.Write("Deine Auswahl: ");
+int choice = Convert.ToInt32(Console.ReadLine());
+bool EndGame = false;
+
+switch (choice)
+{
+    case 1:
+        StartGame();
+        break;
+    case 2:
+        EndGame = true;
+        break;
+    default:
+        Console.WriteLine("Ungültige Eingabe");
+        break;
+}
+
+if (EndGame){
+    return;
+    }
+Console.Clear();
+}
+
+static void StartGame(){
+    string[] words = new string[]
+    {
+        "apfel",
+        "birne",
+        "banane",
+        "kiwi",
+        "ananas",
+        "mango",
+        "kirsche",
+        "pflaume",
+        "erdbeere",
+        "himbeere"
+    };
+
+    Random rnd = new Random();
+    int index = rnd.Next(0, words.Length);
+    string word = words[index].ToLower();
+    GameLoop(word);
+}
+
+static void GameLoop(string word){
+
+    int lives = 10;
+    string hiddenWord = "";
+
+    for (int i = 0; i < word.Length; i++)
+    {
+        hiddenWord += "_";
+    }
+
+    while (true) {
+        Console.Clear();
+        Console.WriteLine("Gesuchtes Wort: " + hiddenWord);
+
+        Console.Write("noch übrige Versuche: ");
+        for (int i = 0; i < lives; i++)
+        {
+            Console.Write("❤️");
+        }
+
+        Console.WriteLine();
+        Console.Write("Gib einen Buchstaben ein:");
+        char Character = Convert.ToChar(Console.ReadLine().ToLower());
+
+        bool foundCharacterInWords = false;
+
+        for (int i = 0; i < word.Length; i++)
+        {
+            if (word[i] == Character)
+            {
+                foundCharacterInWords = true;
+                break;
+            }
+        }
+    
+        string TempHiddenWord = hiddenWord;
+        hiddenWord = "";
+
+        if (foundCharacterInWords)
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] == Character)
+                {
+                    hiddenWord += Character;
+                }
+                else if (TempHiddenWord[i] != '_')
+                {
+                    hiddenWord += TempHiddenWord[i];
+                }
+                else
+                {
+                    hiddenWord += "_";
+                }
+            }
+        }
+
+        if (hiddenWord == word)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Gesuchtes Wort: " + hiddenWord);
+            Console.WriteLine("Herzlichen Glückwunsch! Du hast das Wort erraten!");
+            Console.ReadKey();
+            Console.ResetColor();
+            break;
+        }
+        else 
+        {
+            hiddenWord = TempHiddenWord;
+            
+            if  (lives > 0)
+            {
+                lives--;
+            }
+            else
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Gesuchtes Wort: " + word);
+                Console.WriteLine("Du hast keine Leben mehr übrig! Das Spiel ist vorbei!");
+                Console.ReadKey();
+                Console.ResetColor();
+                break;
+            }
+        }
+
+    }
+}*/
